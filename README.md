@@ -2,47 +2,54 @@
 
 CareerTrack is a full-stack web application that helps users organize and track their job applications in one place.
 
-The application provides a dashboard to monitor application statuses, manage deadlines, and keep track of job opportunities.
+It provides a dashboard to monitor application progress, manage application details, search and filter opportunities, and keep track of important deadlines.
 
 ## Features
 
-- Dashboard displaying total applications, interviews, and offers
-- Add new job applications
-- Edit existing application details
-- Delete applications
-- Search applications by company, role, or notes
-- Filter applications by status
-- Track application deadlines
-- Receive deadline reminders
-- Save application data using a JSON file
-- REST API built with FastAPI
+- **Dashboard:** View job application statistics and application status summaries.
+- **Application Management:** Add, edit, and delete job applications.
+- **Status Tracking:** Track applications through Applied, Assessment, Interview, Selected, and Rejected statuses.
+- **Search Applications:** Find applications using the available search functionality.
+- **Filter Applications:** Filter applications according to their status.
+- **Deadline Tracking:** View upcoming and overdue application deadlines.
+- **Persistent Storage:** Store application records using the FastAPI backend and a local JSON file.
+- **REST API:** Manage application records through FastAPI endpoints.
+- **Responsive Interface:** Use a dashboard-style interface built with React and CSS.
 
-## Tech Stack
+## Technologies Used
 
 ### Frontend
 - React
-- Vite
 - JavaScript
+- HTML
 - CSS
+- Vite
 
 ### Backend
 - Python
 - FastAPI
-- REST API
+- Pydantic
+- Uvicorn
 
 ### Data Storage
-- JSON file
+- JSON file-based storage
+
+### Development Tools
+- Visual Studio Code
+- Git
+- GitHub
+- npm
 
 ## Project Structure
 
 ```text
-job-application-tracker/
+CareerTrack-Job-Application-Tracker/
 ├── backend/
-│   ├── main.py
-│   └── applications.json
+│   └── main.py
 ├── frontend/
 │   ├── public/
 │   ├── src/
+│   │   ├── assets/
 │   │   ├── App.jsx
 │   │   ├── App.css
 │   │   ├── index.css
