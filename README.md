@@ -58,3 +58,10 @@ CareerTrack-Job-Application-Tracker/
 │   └── vite.config.js
 ├── .gitignore
 └── README.md
+---
+
+## 📸 Application Screenshots
+
+### Dashboard
+
+![CareerTrack Dashboard](dashboard.png)
