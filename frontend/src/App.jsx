@@ -307,9 +307,24 @@ function App() {
     (application) => application.status === "Interview"
   ).length;
 
+  // Selected applications are counted as offers in this version.
   const offers = applications.filter(
     (application) => application.status === "Selected"
   ).length;
+
+  // Applications that have moved beyond the initial Applied stage.
+  const respondedApplications = applications.filter(
+    (application) =>
+      application.status && application.status !== "Applied"
+  ).length;
+
+  const responseRate = totalApplications > 0
+    ? Math.round((respondedApplications / totalApplications) * 100)
+    : 0;
+
+  const successRate = totalApplications > 0
+    ? Math.round((offers / totalApplications) * 100)
+    : 0;
 
   // Application status chart.
   const statusCounts = statuses.map((status) => ({
@@ -453,16 +468,31 @@ function App() {
           <div className="stat-card">
             <p>Total Applications</p>
             <h2>{totalApplications}</h2>
+            <span className="stat-caption">Applications tracked</span>
           </div>
 
           <div className="stat-card">
             <p>Interviews</p>
             <h2>{interviews}</h2>
+            <span className="stat-caption">Interview-stage applications</span>
           </div>
 
           <div className="stat-card">
-            <p>Offers</p>
+            <p>Offers / Selected</p>
             <h2>{offers}</h2>
+            <span className="stat-caption">Marked as selected</span>
+          </div>
+
+          <div className="stat-card">
+            <p>Success Rate</p>
+            <h2>{successRate}%</h2>
+            <span className="stat-caption">Selected out of all applications</span>
+          </div>
+
+          <div className="stat-card">
+            <p>Response Rate</p>
+            <h2>{responseRate}%</h2>
+            <span className="stat-caption">Moved beyond Applied status</span>
           </div>
         </section>
 
@@ -470,8 +500,14 @@ function App() {
         <section className="chart-card">
           <div className="section-heading">
             <h2>Application Status Overview</h2>
-            <span>All applications</span>
+            <span>{totalApplications} total applications</span>
           </div>
+
+          <p className="progress-summary">
+            {totalApplications === 0
+              ? "Add your first application to start tracking your progress."
+              : `${respondedApplications} of ${totalApplications} applications have moved beyond the Applied stage.`}
+          </p>
 
           <div className="status-chart">
             {statusCounts.map(({ status, count }) => (
