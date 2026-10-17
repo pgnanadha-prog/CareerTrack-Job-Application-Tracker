@@ -151,6 +151,6 @@ http://localhost:5173
 
 ## Author
 
-**Gnanadha Satyalakshmi Devi**
+**Gnanadha Satya Lakshmi Devi**
 
 GitHub: [pgnanadha-prog](https://github.com/pgnanadha-prog)
