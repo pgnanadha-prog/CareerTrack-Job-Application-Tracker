@@ -43,7 +43,7 @@ It provides a dashboard to monitor application progress, manage application deta
 ## Project Structure
 
 ```text
-CareerTrack-Job-Application-Tracker/
+job-application-tracker/
 ├── backend/
 │   └── main.py
 ├── frontend/
@@ -57,11 +57,100 @@ CareerTrack-Job-Application-Tracker/
 │   ├── package.json
 │   └── vite.config.js
 ├── .gitignore
-└── README.md
+├── README.md
+└── dashboard.png
+```
+
 ---
 
-## 📸 Application Screenshots
+## Application Screenshots
 
 ### Dashboard
 
 ![CareerTrack Dashboard](dashboard.png)
+
+## Getting Started
+
+Follow these steps to run CareerTrack on your local computer.
+
+### Prerequisites
+
+Make sure you have installed:
+- Python
+- Node.js and npm
+- Git
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/pgnanadha-prog/CareerTrack-Job-Application-Tracker.git
+cd CareerTrack-Job-Application-Tracker
+```
+
+### 2. Start the Backend
+
+Open a terminal in the project directory and navigate to the backend folder:
+
+```bash
+cd backend
+```
+
+Install the required Python packages according to your backend dependency file, if provided.
+
+Start the FastAPI server:
+
+```bash
+uvicorn main:app --reload
+```
+
+The backend API will be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+To explore the API endpoints, open:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+### 3. Start the Frontend
+
+Open a **second terminal** in the project directory and navigate to the frontend folder:
+
+```bash
+cd frontend
+```
+
+Install the frontend dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in the terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## Future Improvements
+
+- Add user authentication.
+- Introduce advanced application analytics.
+- Improve the dashboard with additional visualizations.
+- Add notifications for upcoming application deadlines.
+- Explore database integration for persistent storage.
+
+## Author
+
+**Gnanadha Satyalakshmi Devi**
+
+GitHub: [pgnanadha-prog](https://github.com/pgnanadha-prog)
